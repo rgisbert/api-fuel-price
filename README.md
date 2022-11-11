@@ -21,3 +21,35 @@ node dist/app.js
 ```
 
 This will print a message in your console with the URL where the server has been launched.
+
+## API endpoints
+
+This is the list of endpoints created:
+
+### 1. List of fuel types:
+
+Add to your server `/api/fuel/list` to obtain a **list of type fuel** with the **name** and **ID**'s, which you will need later to get its price.
+
+Response example:
+
+```
+[
+	{
+		"id": "1",
+		"name": "Gasolina 95 E5"
+	},
+	{
+		"id": "3",
+		"name": "Gasolina 98 E5"
+	},
+	{
+		"id": "4",
+		"name": "Gasóleo A habitual"
+	},
+	{
+		"id": "5",
+		"name": "Gasóleo Premium"
+	},
+	...
+]
+```
