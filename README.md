@@ -26,7 +26,7 @@ This will print a message in your console with the URL where the server has been
 
 This is the list of endpoints created:
 
-### 1. List of fuel types:
+### 1. List of fuel types<a name="list-fuel-types"></a>:
 
 Add to your server `/api/fuel/list` to obtain a **list of type fuel** with the **name** and **ID**'s, which you will need later to get its price.
 
@@ -53,3 +53,10 @@ Response example:
 	...
 ]
 ```
+
+### 2. List of fuel prices
+
+Add to the given URL `/api/fuel/price/[product]/[zip-code]` replacing these parameters:
+
+ - **[product]**: a valid `id` from the [list of fuel types](#list-fuel-types).
+ - **[zip-code]**: the zip code you want ask for.

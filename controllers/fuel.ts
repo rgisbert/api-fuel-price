@@ -14,3 +14,17 @@ export const getFuelList = async (req: Request, res: Response) => {
         });
     }
 };
+
+/** Get the price list for certain fuel and zip code */
+export const getFuelPriceList = async (req: Request, res: Response) => {
+    try {
+        res.json({
+            msg: `getFuelPriceList`,
+        });
+    } catch (error) {
+        res.status(500).json({
+            msg: `No se ha podido obtener el listado de precios`,
+            error,
+        });
+    }
+};

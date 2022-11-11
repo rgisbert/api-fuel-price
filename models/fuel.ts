@@ -1,8 +1,7 @@
 import { APISpanishGovernment as APIFuel } from '../api';
 
 export class Fuel {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    constructor() {}
+    constructor(public fuel: string) {}
 
     /** Obtains the list of fuel type */
     static async getTypeList() {
@@ -13,6 +12,18 @@ export class Fuel {
             return data;
         } catch (error) {
             return [];
+        }
+    }
+
+    /** Check if fuel id exists */
+    async checkTypeExists() {
+        try {
+            const data = await Fuel.getTypeList();
+            const exists = data.find((fuel) => fuel.id === this.fuel);
+
+            return Boolean(exists);
+        } catch (error) {
+            return false;
         }
     }
 }
