@@ -60,3 +60,35 @@ Add to the given URL `/api/fuel/price/[product]/[zip-code]` replacing these para
 
  - **[product]**: a valid `id` from the [list of fuel types](#list-fuel-types).
  - **[zip-code]**: the zip code you want ask for.
+
+Response example:
+
+```
+[
+	{
+		"price": "1,637",
+		"fuelStation": {
+			"addres": "CARRETERA VILLAVERDE A VALLECAS KM. 283",
+			"name": "SIMON GRUP",
+			"urlGoogleMaps": "https://www.google.es/maps?q=40.373139,-3.638250"
+		}
+	},
+	{
+		"price": "1,657",
+		"fuelStation": {
+			"addres": "CALLE SAN DALMACIO, 13",
+			"name": "PLENOIL",
+			"urlGoogleMaps": "https://www.google.es/maps?q=40.343250,-3.694917"
+		}
+	},
+	{
+		"price": "1,689",
+		"fuelStation": {
+			"addres": "AVENIDA LOS ROSALES, 15",
+			"name": "PLENOIL",
+			"urlGoogleMaps": "https://www.google.es/maps?q=40.367528,-3.691194"
+		}
+	},
+	...
+]
+```

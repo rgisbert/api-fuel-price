@@ -26,4 +26,20 @@ export class Fuel {
             return false;
         }
     }
+
+    /**
+     * Return the prices for fuel in many locations ordered by price (lower first)
+     * @param { string } zip - Zip code to check
+     * @returns List of prices
+     */
+    async getIdPriceByZipCode(zip: string) {
+        try {
+            const api = new APIFuel();
+            const data = await api.getFuelPriceByZip(zip, this.fuel);
+
+            return data;
+        } catch (e) {
+            return [];
+        }
+    }
 }
